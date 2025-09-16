@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import PokemonContainer from "./PokemonContainer";
 import './App.css'
 
 function App() {
-  const [pokemon, setPokemon] = useState({});
+  const [pokemon, setPokemon] = useState([]);
 
   
   useEffect(() => {
@@ -33,12 +34,12 @@ function App() {
     
   }, []);
 
-
-  console.log(pokemon[0].url)
+  
   return (
     <>
     <h1>Pokemon Pick Two</h1>
-
+    <PokemonContainer pokemon={pokemon} />
+    
     </>
   )
 }
